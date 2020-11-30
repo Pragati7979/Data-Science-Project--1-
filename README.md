@@ -3,7 +3,7 @@ Real Estate Price Prediction model.
 
 ![](Look%20of%20the%20website.png)
 
-##Deploy this app to cloud (AWS EC2)
+## Deploy this app to cloud (AWS EC2)
 
 Create EC2 instance using amazon console using following steps :
 
@@ -59,15 +59,25 @@ Once you connect to EC2 instance from winscp (instruction given below), you can 
 After copying code on EC2 server now we can point nginx to load our property website by default. For below steps,
 
 Create this file /etc/nginx/sites-available/bhp.conf. The file content looks like this,
+
 server {
+
     listen 80;
+    
         server_name bhp;
+        
         root /home/ubuntu/Banglore-Home-Prices/client;
+        
         index index.html;
+        
         location /api/ {
+        
              rewrite ^/api(.*) $1 break;
+             
              proxy_pass http://127.0.0.1:5000;
+            
         }
+        
 }
 Create symlink for this file in /etc/nginx/sites-enabled by running this command,
 
