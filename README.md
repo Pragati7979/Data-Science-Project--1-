@@ -79,6 +79,7 @@ server {
         }
         
 }
+
 Create symlink for this file in /etc/nginx/sites-enabled by running this command,
 
 sudo ln -v -s /etc/nginx/sites-available/bhp.conf
