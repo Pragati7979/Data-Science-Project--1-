@@ -3,8 +3,18 @@ Real Estate Price Prediction model.
 
 ![](Look%20of%20the%20website.png)
 
-Deploy this app to cloud (AWS EC2)
-Create EC2 instance using amazon console, also in security group add a rule to allow HTTP incoming traffic
+##Deploy this app to cloud (AWS EC2)
+
+Create EC2 instance using amazon console using following steps :
+
+1)Search EC2 and the launch instance, select ubuntu as your server machine.
+2)Go to configure security group tab,add rule http and https.
+3)Review and launch.
+4)Create a new key pair.
+5)Download that key and store it into the folder c:\users\praga\.ssh
+6)Click on launch instances
+7)Connect to that instance.
+
 Now connect to your instance using a command like this,
 ssh -i "C:\Users\Viral\.ssh\Banglore.pem" ubuntu@ec2-3-133-88-210.us-east-2.compute.amazonaws.com
 nginx setup
